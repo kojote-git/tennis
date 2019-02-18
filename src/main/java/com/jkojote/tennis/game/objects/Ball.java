@@ -97,6 +97,8 @@ public class Ball extends BaseGameObject implements Transformable, Movable, Coll
         return position;
     }
 
+    public Vec3f getPosition() { return position; }
+
     @Override
     public void setScaleFactor(float v) {
     }

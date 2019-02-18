@@ -14,6 +14,8 @@ public class TextBlock implements Transformable, UiElement {
         text = new ModifiableText(font);
     }
 
+    public TextBlock() { }
+
     public CharSequence getText() {
         return text.getSequence();
     }

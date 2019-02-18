@@ -14,14 +14,13 @@ public class BorderLine extends BaseTransformable implements Surface, Drawable {
     private CollisionBox collisionBox;
     private Line line;
 
-    public BorderLine(int width, Vec3f position) {
+    public BorderLine(float width, Vec3f position) {
         collisionBox = new CollisionBox(createVertices(width));
-        collisionBox.setTranslation(position);
         line = new Line(width);
-        line.setTranslation(position);
+        setTranslation(position);
     }
 
-    private Vec3f[] createVertices(int width) {
+    private Vec3f[] createVertices(float width) {
         Vec3f begin = new Vec3f(-width / 2f, 0, 0);
         Vec3f end = new Vec3f(width / 2f, 0, 0);
         return new Vec3f[] { begin, end };

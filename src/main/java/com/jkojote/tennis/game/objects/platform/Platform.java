@@ -82,6 +82,10 @@ public class Platform extends BaseGameObject implements Collidable, Movable, Tra
         return position;
     }
 
+    public Vec3f getPosition() {
+        return position;
+    }
+
     @Override
     public void setScaleFactor(float scaleFactor) {
     }

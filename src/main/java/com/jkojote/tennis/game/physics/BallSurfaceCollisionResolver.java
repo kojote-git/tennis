@@ -10,9 +10,8 @@ public class BallSurfaceCollisionResolver implements CollisionResolver<Ball, Sur
         Vec3f ballVelocity = ball.getVelocity().copy();
         Vec3f surfaceVector = surface.toVector().copy();
         reflectVector(ballVelocity, surfaceVector);
-        ball.setVelocity(ballVelocity.copy().scalar(2.25f));
-        ball.move();
         ball.setVelocity(ballVelocity);
+        ball.move();
     }
 
     private void reflectVector(Vec3f velocity, Vec3f surface) {

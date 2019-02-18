@@ -8,5 +8,5 @@ public interface GameObject {
 
     void removeEventListener(GameEventListener listener);
 
-    <T extends GameObject> void notifyListeners(GameEvent<T> event);
+    void notifyListeners(GameEvent event);
 }

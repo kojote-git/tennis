@@ -1,6 +1,5 @@
 package com.jkojote.tennis;
 
-import com.jkojote.linear.engine.shared.BaseTransformable;
 import com.jkojote.tennis.game.objects.platform.ObjectsRegistry;
 
 import java.util.HashSet;
@@ -40,7 +39,7 @@ public abstract class BaseGameObject implements GameObject{
     }
 
     @Override
-    public <T extends GameObject> void notifyListeners(GameEvent<T> event) {
+    public void notifyListeners(GameEvent event) {
         for (GameEventListener listener: listeners) {
             listener.perform(event);
         }
